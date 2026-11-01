@@ -1,17 +1,31 @@
-# flutter_widgets_glazkov
+# Лабораторная работа №4-5. Flutter.
 
-A new Flutter project.
+**ФИО: Глазков Александр Юрьевич**
+**Группа: ИСП-242**
+**Дата сдачи: 1.11.2026**
 
-## Getting Started
+## Что изучили:
+1. Полностью поняли отличия StatelessWidget от StatefulWidget.
+2. Благодаря setState() смогли управлять состоянием интерфейса.
+3. Была выполнена генерация случайных чисел,которые используются в игре кости.
 
-This project is a starting point for a Flutter application.
+## Скриншот финального приложения:
 
-A few resources to get you started if this is your first Flutter project:
+![img](img/step6_glazkov.png)
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Ссылка на репозиторий:
+
+[GitHub](https://github.com/cocos812/Flutter_Widgets.git)
+
+## Инструкция по запуску:
+
+1. Склонируйте репозиторий.
+2. Выполните `flutter pub get` для установки зависимостей.
+3. Запустите приложение командой `flutter run`.
+
+## Ответы на вопросы:
+1. Разделение кода повышает его читаемость, облегчает навигацию и обеспечивает повторное использование компонентов. Хранение всей логики в main.dart приведёт к разрастанию файла до нескольких тысяч строк, что усложнит отладку и внесение правок.
+2. Это структура, фиксирующая позицию виджета в дереве элементов. Flutter передаёт её неявно; она необходима для доступа виджета к данным, предоставляемым родительскими компонентами.
+3. StatelessWidget рендерится единожды и остаётся неизменным. StatefulWidget поддерживает внутреннее состояние и способен инициировать перерисовку через setState() при его модификации.
+4. Инициализация Random() внутри обработчика нажатия кнопки приводит к созданию нового экземпляра генератора при каждом вызове — это снижает производительность. Оптимально объявить один экземпляр Random на уровне файла для многократного использования.
